@@ -30,7 +30,7 @@ PermitRootLogin no
 DenyUsers {% for user in sshd_denyusers %} {{ user }}{% endfor %}
 
 # GSSAPI options
-GSSAPIAuthentication yes
+GSSAPIAuthentication no
 GSSAPICleanupCredentials no
 
 # WARNING: 'UsePAM no' is not supported and will cause problems -- Jason
@@ -41,6 +41,7 @@ PrintMotd no
 PrintLastLog yes
 TCPKeepAlive yes
 UseLogin no
+UseDNS no
 
 # no default banner path
 #Banner none
@@ -69,3 +70,7 @@ Match{% for criterion in match.criteria %} {{ criterion }}{% endfor %}
 {% endfor %}
 {% endfor %}
 {% endif %}
+
+# Extra sshd config
+
+{{ users_sshd_extra | default("") }}
