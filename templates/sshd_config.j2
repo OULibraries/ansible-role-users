@@ -72,5 +72,5 @@ Match{% for criterion in match.criteria %} {{ criterion }}{% endfor %}
 {% endif %}
 
 # Extra sshd config
-
+# Defined by users_sshd_extra variable in OULibraries.users role
 {{ users_sshd_extra | default("") }}

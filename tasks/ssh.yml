@@ -11,6 +11,7 @@
 - name: Copy ssh_config
   template:
     src: ssh_config.j2
+    validate: /usr/sbin/sshd -T -f %s
     dest: /etc/ssh/ssh_config
     mode: 0644
     owner: root
