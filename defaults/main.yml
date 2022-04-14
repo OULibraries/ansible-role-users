@@ -1,5 +1,5 @@
 ---
-users_secure_path: '/opt/oulib/users/bin:/sbin:/bin:/usr/sbin:/usr/bin'
+users_secure_path: '/opt/oulib/users/bin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin'
 
 # wheel is implied
 users_admin_groups: ""
