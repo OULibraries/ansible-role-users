@@ -1,4 +1,4 @@
-OULibraries.centos7
+OULibraries.users
 =========
 
 This role adds users and ssh keys, confiures ssh, and configures sudoers.
